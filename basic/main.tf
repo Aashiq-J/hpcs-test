@@ -25,4 +25,5 @@ module "kms_key_ring" {
   source      = "git::https://github.com/terraform-ibm-modules/terraform-ibm-kms-key-ring.git?ref=v2.1.0"
   instance_id = module.hpcs_instance.guid
   key_ring_id = "${var.prefix}-key-ring"
+  endpoint_type    = "private"
 }
